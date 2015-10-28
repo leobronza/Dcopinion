@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0009">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Questionario"
+                android:id="@+id/texto_questionarios"
+                android:textStyle="bold"
+                android:textSize="46dp"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="275dp"
+                android:layout_height="200dp"
+                android:id="@+id/imagem_questao"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Nota para o Grupo PET-BCC:"
+                android:id="@+id/titulo_questao"
+                android:textSize="25dp"
+                android:layout_marginTop="20dp"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Corpo_Questao"
+                android:id="@+id/corpo_questao"
+                android:textSize="25dp"
+                android:layout_marginTop="20dp"
+                android:singleLine="true"
+                android:layout_gravity="center" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/estrela"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="#28ff00"
+                android:stepSize="1.0"
+                android:onClick="onclick" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:id="@+id/bt_classifica_ok"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:onClick="onclick_classifica" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
