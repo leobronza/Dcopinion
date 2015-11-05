@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:id="@+id/linerlayout_fragment_resultado">
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/REM"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:isIndicator="true"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/grid_fragment_resultado"
+        android:rowCount="5"
+        android:columnCount="2"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/RE2"
+            android:layout_row="3"
+            android:layout_column="1" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/E1"
+            android:numStars="5"
+            android:rating="1"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+            android:clickable="false"
+            android:layout_row="4"
+            android:layout_column="0" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/E5"
+            android:numStars="5"
+            android:rating="5"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+            android:clickable="false"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/RE5"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/E4"
+            android:numStars="5"
+            android:rating="4"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+            android:clickable="false"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/RE4"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/E3"
+            android:numStars="5"
+            android:rating="3"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+            android:clickable="false"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/RE3"
+            android:layout_row="2"
+            android:layout_column="1" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/E2"
+            android:numStars="5"
+            android:rating="2"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+            android:clickable="false"
+            android:layout_row="3"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/RE1"
+            android:layout_row="4"
+            android:layout_column="1" />
+
+    </GridLayout>
+
+</LinearLayout>
