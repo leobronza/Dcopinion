@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scrollView2"
-        android:fillViewport="false">
+        android:fillViewport="false"
+        android:background="#ffffff">
 
         <LinearLayout
             android:orientation="vertical"
@@ -18,7 +19,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Questionario"
+                android:text="Questionário"
                 android:id="@+id/texto_questionarios"
                 android:textStyle="bold"
                 android:textSize="46dp"

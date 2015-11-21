@@ -8,7 +8,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/estrela"
         android:layout_gravity="center_horizontal|top"
-        android:background="#28ff00"
         android:stepSize="1.0"
         android:onClick="onclick"
         android:layout_marginTop="20dp" />
