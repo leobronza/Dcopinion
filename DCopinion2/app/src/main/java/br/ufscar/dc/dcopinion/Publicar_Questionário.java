@@ -20,7 +20,7 @@ import java.util.Date;
 /**
  * Created by Nicolas on 20/11/2015.
  */
-public class CameraActivity extends Activity {
+public class Publicar_Questionário extends Activity {
 
     Button button;
     ImageView imageView;
@@ -30,7 +30,7 @@ public class CameraActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.camera);
+        setContentView(R.layout.publicar_questionario);
         button = (Button) findViewById(R.id.camB);
         imageView = (ImageView) findViewById(R.id.imV);
 

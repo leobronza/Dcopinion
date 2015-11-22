@@ -14,7 +14,7 @@
         <activity android:name=".Noticias"></activity>
         <activity android:name=".Questionarios"></activity>
         <activity android:name=".Cadastro"></activity>
-	<activity android:name=".CameraActivity"
+	<activity android:name=".Publicar_Questionário"
             android:label="CameraActivity"></activity>
 
         <activity android:name=".Login" android:label="@string/app_name">
