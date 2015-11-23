@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/estrela"
+        android:layout_gravity="center_horizontal|top"
+        android:stepSize="1.0"
+        android:onClick="onclick"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/bt_classifica_ok"
+        android:layout_gravity="center_horizontal|bottom"
+        android:onClick="onclick_classifica"
+        android:layout_marginTop="15dp" />
+</LinearLayout>

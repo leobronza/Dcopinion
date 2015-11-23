@@ -2,17 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/background"
-    android:weightSum="1"
     android:background="@drawable/bgmin2">
 
     <ImageView
-        android:layout_width="218dp"
-        android:layout_height="218dp"
+        android:layout_width="230dp"
+        android:layout_height="220dp"
         android:id="@+id/imageView3"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/dc_logo2" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dc_logo2" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -26,17 +24,15 @@
         android:button="@null"
         android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:layout_gravity="right"
-        android:textColor="#ffffff"
-        android:drawableTint="#2c70ed"
-        android:elegantTextHeight="true" />
+        android:textColor="#ffffff" />
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="vertical">
+        android:layout_marginRight="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,16 +48,7 @@
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/email"
-            android:textColor="#2c70ed"
-            android:textIsSelectable="true"
-            android:singleLine="false"
-            android:enabled="true"
-            android:focusable="true"
-            android:focusableInTouchMode="false"
-            android:selectAllOnFocus="true"
-            android:password="false"
-            android:contextClickable="false"
-            android:clickable="false" />
+            android:textColor="#2162d9" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,8 +65,7 @@
             android:ems="10"
             android:id="@+id/senha"
             android:password="true"
-            android:textColor="#2c70ed"
-            android:textIsSelectable="false" />
+            android:textColor="#2162d9" />
     </LinearLayout>
 
     <LinearLayout
@@ -95,8 +81,10 @@
             android:layout_height="wrap_content"
             android:text="Cadastrar"
             android:id="@+id/bt_novo_cadastar"
+            android:layout_gravity="right"
             android:onClick="onclickcadastro"
-            android:layout_marginTop="-5dp" />
+            android:textColor="#ffffff"
+            android:backgroundTint="#d9888888" />
 
         <Button
             android:layout_width="150dp"
@@ -104,7 +92,8 @@
             android:text="Entrar"
             android:id="@+id/botao_entrar"
             android:onClick="onclicklogin"
-            android:layout_marginTop="-5dp" />
+            android:textColor="#ffffff"
+            android:backgroundTint="#d9888888" />
     </LinearLayout>
 
 </LinearLayout>

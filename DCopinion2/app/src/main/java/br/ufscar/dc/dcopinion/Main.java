@@ -89,13 +89,14 @@ public class Main extends Activity {
         // Consulta questoes disponiveis
         Backgroundtask thread_questoes = new Backgroundtask(this);
         ArrayList<String> consulta_questoes = new ArrayList<>();
-        try {
+        /*try {
             consulta_questoes = thread_questoes.execute("questoes_responder",id_cliente).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
-        }
+        }*/
+        consulta_questoes.add("Alo");
 
         // Separa ids e titulos e tipos
         for (int i = 0; i < consulta_questoes.size(); i += 3) {
@@ -135,13 +136,14 @@ public class Main extends Activity {
         // Consulta noticias disponiveis
         Backgroundtask thread_noticias = new Backgroundtask(this);
         ArrayList<String> consulta_noticias = new ArrayList<>();
-        try {
+        /*try {
             consulta_noticias = thread_noticias.execute("noticias").get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
-        }
+        }*/
+        consulta_noticias.add("Alo");
 
         // Separa ids e titulos das noticias
         for(int i = 0 ; i < consulta_noticias.size(); i+=2) {

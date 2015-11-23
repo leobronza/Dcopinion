@@ -53,9 +53,7 @@ public class Login extends Activity {
 
         // Envia email e senha para validação no servidor
         Backgroundtask thread_login = new Backgroundtask(this);
-        //ArrayList<String> consulta_login = thread_login.execute("login", email.getText().toString(), senha.getText().toString()).get();
-        ArrayList<String> consulta_login = new ArrayList<String>();
-        consulta_login.add("1");
+        ArrayList<String> consulta_login = thread_login.execute("login", email.getText().toString(), senha.getText().toString()).get();
 
         // Verifica respota do servidor
         if(consulta_login.get(0).equals("ERRO")) {

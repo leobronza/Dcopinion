@@ -14,12 +14,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="email"
+        android:text="email@email.com"
         android:id="@+id/email"
         android:textColor="#ffffff"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/bt_resultados"
-        android:layout_toEndOf="@+id/bt_resultados" />
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toLeftOf="@+id/sair"
+        android:layout_toStartOf="@+id/sair" />
 
     <TextView
         android:layout_width="wrap_content"
