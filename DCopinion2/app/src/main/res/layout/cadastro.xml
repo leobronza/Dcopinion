@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgmin2"
+    android:background="@drawable/bgmin"
     android:gravity="center">
 
     <LinearLayout
@@ -46,7 +46,7 @@
 
 
     <TableLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp">
@@ -64,77 +64,50 @@
             android:layout_marginLeft="20dp" />
 
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/classificacao"
-            android:gravity="center">
+            android:id="@+id/classificacao">
 
-            <GridLayout
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:rowCount="2"
-                android:columnCount="2"
-                android:id="@+id/grid_categoria_cadastro">
+                android:text="BCC"
+                android:id="@+id/bcc"
+                android:textSize="20dp"
+                android:checked="true"
+                android:onClick="onclick_categoria"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:textColor="#ffffff"
+                android:buttonTint="#ffffff" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BCC"
-                    android:id="@+id/bcc"
-                    android:textSize="20dp"
-                    android:layout_marginRight="10dp"
-                    android:checked="true"
-                    android:onClick="onclick_categoria"
-                    android:layout_row="0"
-                    android:layout_column="0"
-                    android:textColor="#ffffff"
-                    android:buttonTint="#ffffff" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENC"
+                android:id="@+id/enc"
+                android:textSize="20dp"
+                android:onClick="onclick_categoria"
+                android:checked="false"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:textColor="#ffffff"
+                android:buttonTint="#ffffff" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Docente"
-                    android:id="@+id/docente"
-                    android:layout_column="1"
-                    android:textSize="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:onClick="onclick_categoria"
-                    android:checked="false"
-                    android:layout_row="0"
-                    android:textColor="#ffffff"
-                    android:buttonTint="#ffffff" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ENC"
-                    android:id="@+id/enc"
-                    android:textSize="20dp"
-                    android:layout_marginRight="10dp"
-                    android:onClick="onclick_categoria"
-                    android:checked="false"
-                    android:layout_row="1"
-                    android:layout_column="0"
-                    android:textColor="#ffffff"
-                    android:textColorHint="@style/Platform.AppCompat"
-                    android:buttonTint="#ffffff" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tercerizado"
-                    android:id="@+id/tercerizado"
-                    android:layout_column="1"
-                    android:textSize="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:onClick="onclick_categoria"
-                    android:checked="false"
-                    android:layout_row="1"
-                    android:textColor="#ffffff"
-                    android:singleLine="false"
-                    android:buttonTint="#ffffff" />
-            </GridLayout>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Técnico Administratio e Docentes"
+                android:id="@+id/ta"
+                android:layout_column="1"
+                android:textSize="20dp"
+                android:onClick="onclick_categoria"
+                android:checked="false"
+                android:layout_row="1"
+                android:textColor="#ffffff"
+                android:singleLine="false"
+                android:buttonTint="#ffffff" />
 
         </RadioGroup>
 
@@ -147,6 +120,8 @@
         android:id="@+id/button2"
         android:layout_gravity="center_horizontal"
         android:onClick="onclick_novo_cadastro"
-        android:theme="@style/Platform.AppCompat" />
+        android:textStyle="bold" />
+        <!-- android:theme="@android:style/Platform.AppCompat" -->
+
 
 </LinearLayout>

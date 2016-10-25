@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:id="@+id/grid_conteudo_listview"
+        android:rowCount="1">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/conteudo_imgviewer"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:minWidth="235dp"
+            android:maxWidth="235dp"
+            android:layout_gravity="left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N"
+            android:id="@+id/conteudo_quantidade"
+            android:layout_gravity="center|right"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:autoText="false"
+            android:textSize="24dp"
+            android:textColor="#000000"
+            android:minWidth="50dp"
+            android:maxWidth="50dp" />
+    </GridLayout>
+</LinearLayout>

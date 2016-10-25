@@ -7,15 +7,18 @@
         android:icon="@mipmap/logo_dc2"
         android:screenOrientation="portrait"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        >
+
 
         <activity android:name=".Main"></activity>
         <activity android:name=".Resultado"></activity>
         <activity android:name=".Noticias"></activity>
         <activity android:name=".Questionarios"></activity>
         <activity android:name=".Cadastro"></activity>
-	<activity android:name=".Publicar_Questionário"
-            android:label="CameraActivity"></activity>
+        <activity android:name=".Notificacoes"></activity>
+        <activity android:name=".Geral"></activity>
+	<activity android:name=".Sugerir_Questionario" android:label="CameraActivity"></activity>
 
         <activity android:name=".Login" android:label="@string/app_name">
             <intent-filter>

@@ -5,31 +5,38 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:columnCount="2"
         android:id="@+id/grid_conteudo_listview"
         android:rowCount="1">
 
         <TextView
-            android:layout_width="295dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/conteudo_titulo"
             android:text="Noticias"
             android:layout_gravity="left|top"
-            android:textSize="20dp"
+            android:textSize="22dp"
             android:layout_marginLeft="10dp"
             android:layout_row="0"
             android:layout_column="0"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:minWidth="245dp"
+            android:maxWidth="245dp" />
 
         <TextView
-            android:layout_width="54dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="N"
             android:id="@+id/conteudo_quantidade"
-            android:layout_gravity="center_horizontal|top"
+            android:layout_gravity="center|right"
             android:layout_row="0"
             android:layout_column="1"
-            android:autoText="false" />
+            android:autoText="false"
+            android:textSize="24dp"
+            android:textColor="#000000"
+            android:minWidth="50dp"
+            android:maxWidth="50dp" />
     </GridLayout>
 </LinearLayout>

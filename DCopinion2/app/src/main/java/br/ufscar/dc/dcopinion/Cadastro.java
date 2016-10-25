@@ -3,6 +3,8 @@ package br.ufscar.dc.dcopinion;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 /**
  * Created by leobronza@hotmail.com on 17/09/15.
@@ -14,7 +16,9 @@ public class Cadastro extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.cadastro);
 
         email = (EditText)findViewById(R.id.novo_email);
@@ -26,16 +30,13 @@ public class Cadastro extends Activity {
         // Get valor do RadioButton
         switch (view.getId()){
             case R.id.bcc:
-                string_categoria =  "BCC";
-                break;
-            case R.id.docente:
-                string_categoria = "Docente";
+                string_categoria =  "1";
                 break;
             case  R.id.enc:
-                string_categoria = "ENC";
+                string_categoria = "2";
                 break;
-            case R.id.tercerizado:
-                string_categoria = "Tercerizado";
+            case R.id.ta:
+                string_categoria = "3";
                 break;
         }
     }

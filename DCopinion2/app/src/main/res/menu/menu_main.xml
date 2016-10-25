@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".Main>
+
+    <item android:id="@+id/action_geral" android:title="Geral"
+        android:orderInCategory="0" />
+    <item android:id="@+id/action_notificacoes" android:title="Notificações"
+        android:orderInCategory="1" app:showAsAction="always" />
+    <item android:id="@+id/action_sugerirquestionario" android:title="Sugerir Questionário"
+        android:orderInCategory="2"/>
+    <item android:id="@+id/action_sair" android:title="Logout"
+        android:orderInCategory="3"/>
+
+
+</menu>

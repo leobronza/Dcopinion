@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/background"
     android:weightSum="1"
-    android:background="@drawable/bgmin2">
+    android:background="@drawable/bgmin">
 
     <ImageView
         android:layout_width="218dp"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="Manter Conectado"
         android:id="@+id/manter_conectado"
-        android:checked="false"
+        android:checked="true"
         android:layout_marginRight="40dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentLeft="true"
@@ -28,7 +28,7 @@
         android:layout_gravity="right"
         android:textColor="#ffffff"
         android:drawableTint="#2c70ed"
-        android:elegantTextHeight="true" />
+        android:elegantTextHeight="false" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -53,15 +53,7 @@
             android:ems="10"
             android:id="@+id/email"
             android:textColor="#2c70ed"
-            android:textIsSelectable="true"
-            android:singleLine="false"
-            android:enabled="true"
-            android:focusable="true"
-            android:focusableInTouchMode="false"
-            android:selectAllOnFocus="true"
-            android:password="false"
-            android:contextClickable="false"
-            android:clickable="false" />
+             />
 
         <TextView
             android:layout_width="wrap_content"
@@ -96,7 +88,8 @@
             android:text="Cadastrar"
             android:id="@+id/bt_novo_cadastar"
             android:onClick="onclickcadastro"
-            android:layout_marginTop="-5dp" />
+            android:layout_marginTop="-5dp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="150dp"
@@ -104,7 +97,9 @@
             android:text="Entrar"
             android:id="@+id/botao_entrar"
             android:onClick="onclicklogin"
-            android:layout_marginTop="-5dp" />
+            android:layout_marginTop="-5dp"
+            android:textStyle="bold"
+            android:focusable="true" />
     </LinearLayout>
 
 </LinearLayout>

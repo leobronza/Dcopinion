@@ -8,7 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by leobronza@hotmail.com on 03/11/15.
  */
@@ -22,34 +30,43 @@ public class Fragment_a_responder extends Fragment {
         // Recebe parametros
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            ArrayList<String> result = bundle.getStringArrayList("key");
+           String result = bundle.getString("key");
 
-            // Remove alternativas vazias
-            int x = 0;
-            for (int i = 0; i < result.size(); i++)
-                if (result.get(i).isEmpty())
-                    x++;
 
-            // Retira radiobuton extras
-            rg = (RadioGroup) view.findViewById(R.id.opcoes);
-            for (int i = rg.getChildCount() - 1; i >= ((result.size() - 3 - x) / 2); i--)
-                rg.removeViewAt(i);
+            try {
+                JSONObject jsonObject = new JSONObject(result);
 
-            // Cria arraylist com os radiobutton restantes
-            ArrayList<RadioButton> lista_de_opcoes = new ArrayList<>();
-            for (int i = 0; i < rg.getChildCount(); i++) {
-                View o = rg.getChildAt(i);
-                if (o instanceof RadioButton) {
-                    lista_de_opcoes.add((RadioButton) o);
+                // Remove alternativas vazias
+                int x = 0;
+                for (int i = 0; i < jsonObject.length()-4 ; i+=2)
+                    if (jsonObject.getString(String.valueOf(i)).equals("null"))
+                        x++;
+
+                // Retira radiobuton extras
+                rg = (RadioGroup) view.findViewById(R.id.opcoes);
+                for (int i = rg.getChildCount() - 1; i > 4 - x; i--)
+                    rg.removeViewAt(i);
+
+                // Cria arraylist com os radiobutton restantes
+                ArrayList<RadioButton> lista_de_opcoes = new ArrayList<>();
+                for (int i = 0; i < rg.getChildCount(); i++) {
+                    View o = rg.getChildAt(i);
+                    if (o instanceof RadioButton) {
+                        lista_de_opcoes.add((RadioButton) o);
+                    }
                 }
+
+                // Set texto dos radiobuttons
+                int n = 1;
+                for (int i = 0; i < rg.getChildCount(); i++) {
+                    lista_de_opcoes.get(i).setText(jsonObject.getString(String.valueOf(n)));
+                    n += 2;
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
-            // Set texto dos radiobuttons
-            int n = 0;
-            for (int i = 0; i < ((result.size() - 3 - x) / 2); i++) {
-                lista_de_opcoes.get(i).setText(result.get(4 + n));
-                n += 2;
-            }
         }
         return view;
     }

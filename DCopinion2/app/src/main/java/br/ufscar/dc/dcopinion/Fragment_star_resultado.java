@@ -7,6 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 /**
  * Created by leobronza@hotmail.com on 02/11/15.
@@ -22,34 +26,42 @@ public class Fragment_star_resultado extends android.app.Fragment {
         if (bundle != null) {
 
             // Set quantidade de votos
-            ArrayList<String> result = bundle.getStringArrayList("key");
-            TextView RE1 = (TextView) view.findViewById(R.id.RE1);
-            RE1.setText(String.valueOf(result.get(3)));
-            TextView RE2 = (TextView) view.findViewById(R.id.RE2);
-            RE2.setText(String.valueOf(result.get(5)));
-            TextView RE3 = (TextView) view.findViewById(R.id.RE3);
-            RE3.setText(String.valueOf(result.get(7)));
-            TextView RE4 = (TextView) view.findViewById(R.id.RE4);
-            RE4.setText(String.valueOf(result.get(9)));
-            TextView RE5 = (TextView) view.findViewById(R.id.RE5);
-            RE5.setText(String.valueOf(result.get(11)));
+            String result = bundle.getString("key");
+            try {
+                JSONObject jsonObject = new JSONObject(result);
+                RatingBar estrela;
 
-            // calculo de votos
-            float estrelas = (Integer.parseInt(result.get(3).toString()) +
-                    Integer.parseInt(result.get(5).toString())*2 +
-                    Integer.parseInt(result.get(7).toString())*3 +
-                    Integer.parseInt(result.get(9).toString())*4 +
-                    Integer.parseInt(result.get(11).toString())*5);
-            float respostas = (Integer.parseInt(result.get(3).toString()) +
-                    Integer.parseInt(result.get(5).toString()) +
-                    Integer.parseInt(result.get(7).toString()) +
-                    Integer.parseInt(result.get(9).toString()) +
-                    Integer.parseInt(result.get(11).toString()));
+                float estrelas = (Integer.parseInt(jsonObject.getString("E1")) +
+                        Integer.parseInt(jsonObject.getString("E2"))*2 +
+                        Integer.parseInt(jsonObject.getString("E3"))*3 +
+                        Integer.parseInt(jsonObject.getString("E4"))*4 +
+                        Integer.parseInt(jsonObject.getString("E5"))*5);
+                float respostas = (Integer.parseInt(jsonObject.getString("E1")) +
+                        Integer.parseInt(jsonObject.getString("E2")) +
+                        Integer.parseInt(jsonObject.getString("E3")) +
+                        Integer.parseInt(jsonObject.getString("E4")) +
+                        Integer.parseInt(jsonObject.getString("E5")));
 
-            // Set meida de votos
-            RatingBar REM = (RatingBar) view.findViewById(R.id.REM);
-            REM.setRating(estrelas / respostas);
+                estrela = (RatingBar) view.findViewById(R.id.REM);
+                estrela.setRating(estrelas / respostas);
+
+                TextView E1 = (TextView) view.findViewById(R.id.RE1);
+                E1.setText(jsonObject.getString("E1"));
+                TextView E2 = (TextView) view.findViewById(R.id.RE2);
+                E2.setText(jsonObject.getString("E2"));
+                TextView E3 = (TextView) view.findViewById(R.id.RE3);
+                E3.setText(jsonObject.getString("E3"));
+                TextView E4 = (TextView) view.findViewById(R.id.RE4);
+                E4.setText(jsonObject.getString("E4"));
+                TextView E5 = (TextView) view.findViewById(R.id.RE5);
+                E5.setText(jsonObject.getString("E5"));
+
+
+            } catch (JSONException e) {
+            }
+
         }
         return view;
     }
+
 }

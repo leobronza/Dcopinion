@@ -1,32 +1,57 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bgmin">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/Questionarios"
-        android:layout_below="@+id/Pontos"
-        android:layout_marginTop="10dp">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Questionarios"
+            android:layout_marginTop="10dp"
+            android:background="#082950"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultados"
+                android:id="@+id/texto_questionarios"
+                android:textStyle="bold"
+                android:textSize="26dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff" />
+
+            <ExpandableListView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/questionarios"
+                android:fastScrollAlwaysVisible="true"
+                android:background="#6c173cd4"
+                android:layout_marginBottom="60dp" />
+
+
+        </LinearLayout>
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Questionários"
-            android:id="@+id/texto_questionarios"
+            android:text="Voltar"
+            android:id="@+id/button6"
+            android:onClick="onclick_voltar"
             android:textStyle="bold"
-            android:textSize="26dp"
-            android:layout_gravity="center_horizontal" />
-
-        <ExpandableListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/questionarios"
-            android:fastScrollAlwaysVisible="true" />
-
-
-    </LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/Questionarios"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp" />
+    </RelativeLayout>
 
 </LinearLayout>

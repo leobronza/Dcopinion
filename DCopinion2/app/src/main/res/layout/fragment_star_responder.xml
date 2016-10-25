@@ -10,14 +10,16 @@
         android:layout_gravity="center_horizontal|top"
         android:stepSize="1.0"
         android:onClick="onclick"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:background="#ffffff" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OK"
+        android:text="Confirmar"
         android:id="@+id/bt_classifica_ok"
-        android:layout_gravity="center_horizontal|bottom"
+        android:layout_gravity="center_horizontal"
         android:onClick="onclick_classifica"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textStyle="bold" />
 </LinearLayout>

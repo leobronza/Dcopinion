@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -22,7 +24,9 @@ public class Login extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.login);
 
         // Set nos EditText email e senha
@@ -53,9 +57,9 @@ public class Login extends Activity {
 
         // Envia email e senha para validação no servidor
         Backgroundtask thread_login = new Backgroundtask(this);
-        //ArrayList<String> consulta_login = thread_login.execute("login", email.getText().toString(), senha.getText().toString()).get();
-        ArrayList<String> consulta_login = new ArrayList<String>();
-        consulta_login.add("1");
+        ArrayList<String> consulta_login = thread_login.execute("login", email.getText().toString(), senha.getText().toString()).get();
+        //ArrayList<String> consulta_login = new ArrayList<String>();
+        //consulta_login.add("1");
 
         // Verifica respota do servidor
         if(consulta_login.get(0).equals("ERRO")) {

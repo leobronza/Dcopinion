@@ -30,10 +30,10 @@ public class BackGroundtaskImage extends AsyncTask<String,Void,Bitmap> {
         String id = params[1];
         Bitmap imagem = null;
         if (method.equals("noticia_completa_imagem")) {
-            imagem_url = "http://192.168.0.104/webapp/noticia_completa_imagem.php";
+            imagem_url = "http://200.18.97.50/webapp/noticia_completa_imagem.php";
         }
             else if(method.equals("questao_completa_imagem")) {
-            imagem_url = "http://192.168.0.104/webapp/questao_completa_imagem.php";
+            imagem_url = "http://200.18.97.50/webapp/questao_completa_imagem.php";
         }
             try {
                 URL url = new URL(imagem_url);
